@@ -16,13 +16,16 @@ export default function Header({ onServiceChange, serviceType }) {
           <Link className="navbar-brand" to="/"><span className="h2">Додавання</span></Link>
           <ul className="navbar-nav justify-content-around w-50">
             <li className="nav-item">
-              <Link className="nav-link text-success" to="/people">Вiднiмання </Link>
+              <Link className="nav-link text-success" to="/">Вiднiмання </Link>
             </li>
             <li className="navbar-item">
               <Link className="nav-link text-success" to="/">Множення</Link>
             </li>
             <li className="navbar-item">
               <Link className="nav-link text-success" to="/">Дiлення</Link>
+            </li>
+            <li className="navbar-item">
+              <Link className="nav-link text-success" to="/">Test</Link>
             </li>
             <li className="navbar-item">
               <button className="btn btn-outline-success" >
