@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/alicelearn/static/js/main.ceed2e30.chunk.js",
+    "main.js.map": "/alicelearn/static/js/main.ceed2e30.chunk.js.map",
+    "runtime-main.js": "/alicelearn/static/js/runtime-main.bd84d4e7.js",
+    "runtime-main.js.map": "/alicelearn/static/js/runtime-main.bd84d4e7.js.map",
+    "static/js/2.bf64f81f.chunk.js": "/alicelearn/static/js/2.bf64f81f.chunk.js",
+    "static/js/2.bf64f81f.chunk.js.map": "/alicelearn/static/js/2.bf64f81f.chunk.js.map",
+    "index.html": "/alicelearn/index.html",
+    "static/js/2.bf64f81f.chunk.js.LICENSE.txt": "/alicelearn/static/js/2.bf64f81f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bd84d4e7.js",
+    "static/js/2.bf64f81f.chunk.js",
+    "static/js/main.ceed2e30.chunk.js"
+  ]
+}
