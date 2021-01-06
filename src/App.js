@@ -1,31 +1,14 @@
-// import './App.css';
-import randomIntGen from "./componets/randomIntGen/randomIntGen";
-import Header from "./componets/header/header"
+import Header from "./componets/header/header";
+import "./bootstrap.min.css";
+import Expression from "./componets/expressions/expressions";
 
 function App() {
+
+
   return (
     <div className="container">
-      <Header/>
-     <h1>{randomIntGen(100)} <br/>
-     + <br/> 
-     {randomIntGen(100)} <br/> <input/>
-     </h1>
-     <h1>{randomIntGen(100)} <br/>
-     + <br/> 
-     {randomIntGen(100)} <br/> <input/>
-     </h1>
-     <h1>{randomIntGen(100)} <br/>
-     + <br/> 
-     {randomIntGen(100)} <br/> <input/>
-     </h1>
-     <h1>{randomIntGen(100)} <br/>
-     + <br/> 
-     {randomIntGen(100)} <br/> <input/>
-     </h1>
-     <h1>{randomIntGen(100)} <br/>
-     + <br/> 
-     {randomIntGen(100)} <br/> <input/>
-     </h1>
+      <Header />
+      <Expression />
     </div>
   );
 }
