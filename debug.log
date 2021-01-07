@@ -1,6 +1,0 @@
-[0104/153140.295:ERROR:directory_reader_win.cc(43)] FindFirstFile: ������� �� ������� ����� ��������� ����. (0x3)
-[0106/125006.496:ERROR:directory_reader_win.cc(43)] FindFirstFile: ������� �� ������� ����� ��������� ����. (0x3)
-[0107/003654.906:ERROR:directory_reader_win.cc(43)] FindFirstFile: ������� �� ������� ����� ��������� ����. (0x3)
-[0108/004027.270:ERROR:directory_reader_win.cc(43)] FindFirstFile: ������� �� ������� ����� ��������� ����. (0x3)
-  test
-  
