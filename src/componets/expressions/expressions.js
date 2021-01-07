@@ -1,48 +1,70 @@
-import React from "react";
+import React, { Component } from "react";
 import InputAnswer from "../inputAnswer/inputAnswer";
 import randomIntGen from "../randomIntGen/randomIntGen";
 
-export default function Expression() {
-  const exprType = sub;
+export default class Expression extends Component {
+  
+  state = {
+    firstNum: randomIntGen(1000),
+    secondNum: randomIntGen(1000),
+    rightAnswerConuter: 0,
+    wrongAnswerConuter: 0,
+  };
 
-  function add() {
-    return (
-      <h1>
-        {randomIntGen()} + {randomIntGen()} = <input />
-      </h1>
-    );
-  }
-
-  function sub() {
-    let firstNum = randomIntGen();
-    let secondNum = randomIntGen();
-
-    if (firstNum < secondNum) {
-      [firstNum, secondNum] = [secondNum, firstNum];
+  sub() {
+    if (this.state.firstNum < this.state.secondNum) {
+      [this.state.firstNum, this.state.secondNum] = [
+        this.state.secondNum,
+        this.state.firstNum,
+      ];
     }
-
-    // const answer = firstNum - secondNum;
 
     const checkAnswer = (userAnswer) => {
       if (!userAnswer) {
         return;
       }
-      if (userAnswer == firstNum - secondNum) {
-        console.log("yes!!!");
-        sub();
+      if (userAnswer == this.state.firstNum - this.state.secondNum) {
+        this.setState(({ rightAnswerConuter }) => {
+          return {
+            firstNum: randomIntGen(),
+            secondNum: randomIntGen(),
+            rightAnswerConuter: rightAnswerConuter + 1,
+          };
+        });
+      } else {
+        this.setState(({ wrongAnswerConuter }) => {
+          return {
+            wrongAnswerConuter: wrongAnswerConuter + 1,
+          };
+        });
       }
-      console.log(firstNum - secondNum, userAnswer);
+
+      console.log(this.state.firstNum - this.state.secondNum, userAnswer);
     };
 
     return (
-      <div className="d-flex">
-        <span className="h1 text-nowrap mx-3 d-flex align-items-center">
-          {firstNum} - {secondNum} =
-        </span>
-        <InputAnswer onInputAnswer={checkAnswer} />
+      <div>
+        <div className="h3">
+          <span className="text-success d-block">
+            Верно: {this.state.rightAnswerConuter}
+          </span>
+          <span className="text-danger">
+            Мимо: {this.state.wrongAnswerConuter}
+          </span>
+        </div>
+        <br />
+
+        <div className="d-flex">
+          <span className="h1 text-nowrap mx-3 d-flex align-items-center">
+            {this.state.firstNum} - {this.state.secondNum} =
+          </span>
+          <InputAnswer onInputAnswer={checkAnswer} />
+        </div>
       </div>
     );
   }
 
-  return exprType();
+  render() {
+    return this.sub();
+  }
 }
