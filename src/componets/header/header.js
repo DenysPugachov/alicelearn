@@ -1,35 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom"
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
 
 export default function Header() {
   return (
-    <Router>
-      <nav className="navbar navbar-expand-sm navbar-dark bg-transparent mb-3">
-        <div className="container justify-content-start">
-          {/* <Link className="navbar-brand text-danger" to="/"><span className="h2">Alice</span></Link> */}
-          <ul className="navbar-nav justify-content-around w-50">
-            <li className="nav-item">
-              <Link className="nav-link text-success" to="/">Додавання </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-success" to="/">Вiднiмання </Link>
-            </li>
-            <li className="navbar-item">
-              <Link className="nav-link text-success" to="/">Множення</Link>
-            </li>
-            <li className="navbar-item">
-              <Link className="nav-link text-success" to="/">Дiлення</Link>
-            </li>
-            {/* <li className="navbar-item">
-              <button className="btn btn-danger" >
-               Login
-              </button>
-            </li> */}
-          </ul>
-        </div>
-      </nav>
-    </Router>
+    <nav className="navbar navbar-expand-sm navbar-dark bg-transparent mb-3">
+      <div className="container justify-content-start">
+        {/* <Link className="navbar-brand text-danger"><span className="h2">Alice</span></Link> */}
+        <ul className="navbar-nav justify-content-around w-50">
+          <li className="nav-item">
+            <button className="btn btn-outline-danger">Додавання </button>
+          </li>
+          <li className="nav-item">
+            <button className="btn btn-outline-warning">Вiднiмання </button>
+          </li>
+          <li className="navbar-item">
+            <button className="btn btn-outline-success">Множення</button>
+          </li>
+          <li className="navbar-item">
+            <button className="btn btn-outline-primary">Дiлення</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }

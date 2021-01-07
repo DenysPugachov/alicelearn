@@ -1,4 +1,5 @@
 import React from "react";
+import InputAnswer from "../inputAnswer/inputAnswer";
 import randomIntGen from "../randomIntGen/randomIntGen";
 
 export default function Expression() {
@@ -20,13 +21,26 @@ export default function Expression() {
       [firstNum, secondNum] = [secondNum, firstNum];
     }
 
-    const answer = firstNum - secondNum;
+    // const answer = firstNum - secondNum;
 
-    console.log(answer);
+    const checkAnswer = (userAnswer) => {
+      if (!userAnswer) {
+        return;
+      }
+      if (userAnswer == firstNum - secondNum) {
+        console.log("yes!!!");
+        sub();
+      }
+      console.log(firstNum - secondNum, userAnswer);
+    };
+
     return (
-      <h1>
-        {firstNum} - {secondNum} = {answer}
-      </h1>
+      <div className="d-flex">
+        <span className="h1 text-nowrap mx-3 d-flex align-items-center">
+          {firstNum} - {secondNum} =
+        </span>
+        <InputAnswer onInputAnswer={checkAnswer} />
+      </div>
     );
   }
 

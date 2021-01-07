@@ -1,9 +1,8 @@
-import Header from "./componets/header/header";
+import Header from "../header/header";
 import "./bootstrap.min.css";
-import Expression from "./componets/expressions/expressions";
+import Expression from "../expressions/expressions";
 
 function App() {
-
 
   return (
     <div className="container">
