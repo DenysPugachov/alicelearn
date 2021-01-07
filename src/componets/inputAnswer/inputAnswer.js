@@ -28,13 +28,13 @@ export default class InputAnswer extends Component {
         <input
           className="form-control large-input"
           type="number"
-          placeholder="Ответ"
+          placeholder="..."
           onChange={this.onInputChange}
           value={inputValue}
         />
 
         <button className="btn btn-outline-info" type="submit">
-          Проверить
+          <span>&#10003;</span>
         </button>
       </form>
     );
