@@ -23,6 +23,7 @@ export default class Expression extends Component {
       if (!userAnswer) {
         return;
       }
+      // eslint-disable-next-line eqeqeq
       if (userAnswer == this.state.firstNum - this.state.secondNum) {
         this.setState(({ rightAnswerCounter }) => {
           return {
