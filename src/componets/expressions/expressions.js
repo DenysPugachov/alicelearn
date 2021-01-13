@@ -23,6 +23,10 @@ export default class Expression extends Component {
       if (!userAnswer) {
         return;
       }
+<<<<<<< HEAD
+=======
+      //try to use EqualTo() or something like this;
+>>>>>>> Heilight_clicked_btn
       // eslint-disable-next-line eqeqeq
       if (userAnswer == this.state.firstNum - this.state.secondNum) {
         this.setState(({ rightAnswerCounter }) => {
@@ -40,7 +44,7 @@ export default class Expression extends Component {
         });
       }
 
-      console.log(this.state.firstNum - this.state.secondNum, userAnswer);
+      console.log(`Right answer = ${this.state.firstNum - this.state.secondNum} \nUser input   = ${userAnswer}`);
     };
 
     return (
