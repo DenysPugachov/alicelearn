@@ -9,59 +9,15 @@ export default class Header extends Component {
     dev: false,
   };
 
-  onBntClicked = clickedBtn => {
-
-    switch (clickedBtn) {
-
-      case "add":
-        this.setState(({ add }) => {
-          return {
-            add: !add,
-            sub: false,
-            mul: false,
-            dev: false,
-          };
-        });
-        break;
-
-      case "sub":
-        this.setState(({ sub }) => {
-          return {
-            add: false,
-            sub: !sub,
-            mul: false,
-            dev: false,
-          };
-        });
-        break;
-
-      case "mul":
-        this.setState(({ mul }) => {
-          return {
-            add: false,
-            mul: !mul,
-            sub: false,
-            dev: false,
-          };
-        });
-        break;
-
-      case "dev":
-        this.setState(({ dev }) => {
-          return {
-            dev: !dev,
-            sub: false,
-            mul: false,
-          };
-        });
-        break;
-
-      default:
-        console.log("Wrong selected btn value!");
-        break;
-    }
-
-
+  clearSelect = () => {
+    this.setState(() => {
+      return {
+        add: false,
+        sub: false,
+        mul: false,
+        dev: false,
+      };
+    });
   };
 
 
@@ -75,28 +31,40 @@ export default class Header extends Component {
             <li className="nav-item">
               <button
                 className={ `btn btn-outline-danger ` + (this.state.add && "active") }
-                onClick={ () => { this.onBntClicked("add"); } }
+                onClick={ () => {
+                  this.clearSelect();
+                  this.setState(({ add }) => { return { add: !add, }; });
+                } }
               >Додавання </button>
             </li>
 
             <li className="nav-item">
               <button
                 className={ `btn btn-outline-warning ` + (this.state.sub && "active") }
-                onClick={ () => { this.onBntClicked("sub"); } }
+                onClick={ () => {
+                  this.clearSelect();
+                  this.setState(({ sub }) => { return { sub: !sub, }; });
+                } }
               > Вiднiмання </button>
             </li>
 
             <li className="navbar-item">
               <button
                 className={ `btn btn-outline-success ` + (this.state.mul && "active") }
-                onClick={ () => { this.onBntClicked("mul"); } }
+                onClick={ () => {
+                  this.clearSelect();
+                  this.setState(({ mul }) => { return { mul: !mul, }; });
+                } }
               >Множення</button>
             </li>
 
             <li className="navbar-item">
               <button
                 className={ `btn btn-outline-primary ` + (this.state.dev && "active") }
-                onClick={ () => { this.onBntClicked("dev"); } }
+                onClick={ () => {
+                  this.clearSelect();
+                  this.setState(({ dev }) => { return { dev: !dev, }; });
+                } }
               >Дiлення</button>
             </li>
 
