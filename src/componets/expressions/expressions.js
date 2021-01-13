@@ -23,10 +23,7 @@ export default class Expression extends Component {
       if (!userAnswer) {
         return;
       }
-<<<<<<< HEAD
-=======
       //try to use EqualTo() or something like this;
->>>>>>> Heilight_clicked_btn
       // eslint-disable-next-line eqeqeq
       if (userAnswer == this.state.firstNum - this.state.secondNum) {
         this.setState(({ rightAnswerCounter }) => {
