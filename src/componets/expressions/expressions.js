@@ -39,7 +39,7 @@ export default class Expression extends Component {
         });
       }
 
-      console.log(this.state.firstNum - this.state.secondNum, userAnswer);
+      console.log(`Right answer = ${this.state.firstNum - this.state.secondNum} \nUser input   = ${userAnswer}`);
     };
 
     return (
