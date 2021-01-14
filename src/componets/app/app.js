@@ -1,13 +1,19 @@
 import Header from "../header/header";
 import "./bootstrap.min.css";
-import Expression from "../expressions/expressions";
+import { Sub, Add, Mul, Dev } from "../expressions";
 
 function App() {
 
   return (
     <div className="container">
       <Header />
-      <Expression />
+      <Sub />
+      <hr />
+      <Add />
+      <hr />
+      <Mul />
+      <hr />
+      <Dev />
     </div>
   );
 }
