@@ -2,69 +2,47 @@ import React, { Component } from "react";
 
 export default class Header extends Component {
 
-  state = {
-    add: false,
-    sub: true,
-    mul: false,
-    dev: false,
-  };
-
-  clearSelect = () => {
-    this.setState(() => {
-      return {
-        add: false,
-        sub: false,
-        mul: false,
-        dev: false,
-      };
-    });
-  };
-
   render() {
-
+    // console.log(this.props.selectedBtn);
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-transparent mb-3" >
-        <div className="container justify-content-start">
-          {/* <Link className="navbar-brand text-danger"><span className="h2">Alice</span></Link> */ }
+      <nav className="navbar navbar-expand bg-transparent mb-3" >
+        <div className="container justify-content-center">
           <ul className="navbar-nav justify-content-around w-50">
+
             <li className="nav-item">
               <button
-                className={ `btn btn-outline-danger ` + (this.state.add && "active") }
+                className={ `btn btn-outline-danger ` + (this.props.selectedBtn.add && "active") }
                 onClick={ () => {
-                  this.clearSelect();
-                  this.setState(({ add }) => { return { add: !add, }; });
+                  this.props.btnClicked("add");
                 } }
-              >Додавання </button>
+              > + </button>
             </li>
 
             <li className="nav-item">
               <button
-                className={ `btn btn-outline-warning ` + (this.state.sub && "active") }
+                className={ `btn btn-outline-warning ` + (this.props.selectedBtn.sub && "active") }
                 onClick={ () => {
-                  this.clearSelect();
-                  this.setState(({ sub }) => { return { sub: !sub, }; });
+                  this.props.btnClicked("sub");
                 } }
-              > Вiднiмання </button>
+              > - </button>
             </li>
 
             <li className="navbar-item">
               <button
-                className={ `btn btn-outline-success ` + (this.state.mul && "active") }
+                className={ `btn btn-outline-success ` + (this.props.selectedBtn.mul && "active") }
                 onClick={ () => {
-                  this.clearSelect();
-                  this.setState(({ mul }) => { return { mul: !mul, }; });
+                  this.props.btnClicked("mul");
                 } }
-              >Множення</button>
+              >*</button>
             </li>
 
             <li className="navbar-item">
               <button
-                className={ `btn btn-outline-primary ` + (this.state.dev && "active") }
+                className={ `btn btn-outline-primary ` + (this.props.selectedBtn.dev && "active") }
                 onClick={ () => {
-                  this.clearSelect();
-                  this.setState(({ dev }) => { return { dev: !dev, }; });
+                  this.props.btnClicked("dev");
                 } }
-              >Дiлення</button>
+              >/</button>
             </li>
 
           </ul>
