@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/alicelearn/static/css/main.1c2d145c.chunk.css",
-    "main.js": "/alicelearn/static/js/main.bc6f56bc.chunk.js",
-    "main.js.map": "/alicelearn/static/js/main.bc6f56bc.chunk.js.map",
+    "main.css": "/alicelearn/static/css/main.73eb40ca.chunk.css",
+    "main.js": "/alicelearn/static/js/main.6e8e819f.chunk.js",
+    "main.js.map": "/alicelearn/static/js/main.6e8e819f.chunk.js.map",
     "runtime-main.js": "/alicelearn/static/js/runtime-main.bd84d4e7.js",
     "runtime-main.js.map": "/alicelearn/static/js/runtime-main.bd84d4e7.js.map",
     "static/js/2.3291b430.chunk.js": "/alicelearn/static/js/2.3291b430.chunk.js",
     "static/js/2.3291b430.chunk.js.map": "/alicelearn/static/js/2.3291b430.chunk.js.map",
     "index.html": "/alicelearn/index.html",
-    "static/css/main.1c2d145c.chunk.css.map": "/alicelearn/static/css/main.1c2d145c.chunk.css.map",
+    "static/css/main.73eb40ca.chunk.css.map": "/alicelearn/static/css/main.73eb40ca.chunk.css.map",
     "static/js/2.3291b430.chunk.js.LICENSE.txt": "/alicelearn/static/js/2.3291b430.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bd84d4e7.js",
     "static/js/2.3291b430.chunk.js",
-    "static/css/main.1c2d145c.chunk.css",
-    "static/js/main.bc6f56bc.chunk.js"
+    "static/css/main.73eb40ca.chunk.css",
+    "static/js/main.6e8e819f.chunk.js"
   ]
 }
