@@ -1,7 +1,6 @@
 import React from "react";
 
 const Header = props => {
-
   const expressionBtns = props.buttons.map(btn => {
     return (
       <button

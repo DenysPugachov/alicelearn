@@ -1,8 +1,17 @@
 import React, { Component } from "react";
 import Header from "../header/header";
 import "./bootstrap.min.css";
-import { Sub, Add, Mul, Dev } from "../expressions";
+import "./style.css";
+import Expression from "../expressions/Expression";
 
+const version = "v1.01";
+
+const btns = [
+  { label: "+", id: "add", cls: "danger" },
+  { label: "-", id: "sub", cls: "warning" },
+  { label: "*", id: "mul", cls: "success" },
+  { label: "/", id: "dev", cls: "primary" },
+];
 
 export default class App extends Component {
 
@@ -12,13 +21,6 @@ export default class App extends Component {
     mul: false,
     dev: true,
   };
-
-  btns = [
-    { label: "+", id: "add", cls: "danger" },
-    { label: "-", id: "sub", cls: "warning" },
-    { label: "*", id: "mul", cls: "success" },
-    { label: "/", id: "dev", cls: "primary" },
-  ];
 
   clearState = () => {
     this.setState(() => {
@@ -61,20 +63,16 @@ export default class App extends Component {
   };
 
   render() {
-
     return (
       <div className="container" >
+        <div className="version">{ version }</div>
         <Header
-          buttons={ this.btns }
+          buttons={ btns }
           btnClicked={ this.btnClicked }
           selectedBtn={ this.state }
         />
         <hr />
-        {this.state.add && <Add /> }
-        {this.state.sub && <Sub /> }
-        {this.state.dev && <Dev /> }
-        {this.state.mul && <Mul /> }
-
+        <Expression selectedExpression={ this.state } />
       </div>
     );
   }
