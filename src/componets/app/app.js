@@ -13,6 +13,13 @@ export default class App extends Component {
     dev: true,
   };
 
+  btns = [
+    { label: "+", id: "add", cls: "danger" },
+    { label: "-", id: "sub", cls: "warning" },
+    { label: "*", id: "mul", cls: "success" },
+    { label: "/", id: "dev", cls: "primary" },
+  ];
+
   clearState = () => {
     this.setState(() => {
       return {
@@ -54,9 +61,11 @@ export default class App extends Component {
   };
 
   render() {
+
     return (
       <div className="container" >
         <Header
+          buttons={ this.btns }
           btnClicked={ this.btnClicked }
           selectedBtn={ this.state }
         />
