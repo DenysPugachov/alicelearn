@@ -16,10 +16,10 @@ const btns = [
 export default class App extends Component {
 
   state = {
-    add: false,
+    add: true,
     sub: false,
     mul: false,
-    dev: true,
+    dev: false,
   };
 
   clearState = () => {

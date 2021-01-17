@@ -20,7 +20,7 @@ export default class Add extends Component {
       //try to use EqualTo() or something like this;
       // eslint-disable-next-line eqeqeq
       if (userAnswer == this.state.firstNum + this.state.secondNum) {
-        //make count of rightAnswer
+        //count rightAnswer
         this.setState(({ rightAnswerCounter }) => {
           return {
             firstNum: randomIntGen(1000),
@@ -29,7 +29,7 @@ export default class Add extends Component {
           };
         });
       } else {
-        //make count of wrongAnswer
+        //count wrongAnswer
         this.setState(({ wrongAnswerCounter }) => {
           return {
             wrongAnswerCounter: wrongAnswerCounter + 1,
@@ -37,6 +37,7 @@ export default class Add extends Component {
         });
       }
 
+      //show answer in console
       console.log(`Right answer = ${this.state.firstNum + this.state.secondNum} \nUser input   = ${userAnswer}`);
     };
 
@@ -53,7 +54,7 @@ export default class Add extends Component {
         <br />
 
         <div className="d-flex">
-          <span className="h1 text-nowrap mx-3 d-flex align-items-center">
+          <span className="h1 text-nowrap mx-3 align-items-center">
             { this.state.firstNum } + { this.state.secondNum } =
           </span>
           <InputAnswer onInputAnswer={ checkAnswer } />
