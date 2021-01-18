@@ -8,9 +8,10 @@
   background: transparent;
   /* background: greenyellow; */
   width: 100%;
-  direction: rtl;
   padding: 5px;
   height: 9vh;
+  direction: rtl;
+  unicode-bidi: bidi-override;
 }
 
 /* disable default arrows for Chrome */

@@ -24,9 +24,12 @@ export default class Sub extends Component {
         return;
       }
 
+      //reverse answer form bidi:override input
+      const revertAnswer = userAnswer.split("").reverse().join("");
+
       //try to use EqualTo() or something like this;
       // eslint-disable-next-line eqeqeq
-      if (userAnswer == this.state.firstNum - this.state.secondNum) {
+      if (revertAnswer == this.state.firstNum - this.state.secondNum) {
         this.setState(({ rightAnswerCounter }) => {
           return {
             firstNum: randomIntGen(1000),
@@ -42,7 +45,7 @@ export default class Sub extends Component {
         });
       }
 
-      console.log(`Right answer = ${this.state.firstNum - this.state.secondNum} \nUser input   = ${userAnswer}`);
+      console.log(`Right answer = ${this.state.firstNum - this.state.secondNum} \nUser input   = ${revertAnswer}`);
     };
 
     return (
@@ -55,13 +58,29 @@ export default class Sub extends Component {
             Мимо: { this.state.wrongAnswerCounter }
           </span>
         </div>
+        <hr />
         <br />
 
-        <div className="d-flex">
-          <span className="h1 text-nowrap mx-3 d-flex align-items-center">
-            { this.state.firstNum } - { this.state.secondNum } =
-          </span>
-          <InputAnswer onInputAnswer={ checkAnswer } />
+        <div className="expr-container">
+          <div className="expression-wrapper">
+            <div className="number-box ">
+
+              <div className="num">
+                { this.state.firstNum }
+              </div>
+
+              <span className="expr-symbol"> - </span>
+
+              <div className="num">
+                { this.state.secondNum }
+
+              </div>
+            </div>
+
+            <div className="num">
+              <InputAnswer onInputAnswer={ checkAnswer } />
+            </div>
+          </div>
         </div>
       </div>
     );

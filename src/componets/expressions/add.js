@@ -17,9 +17,12 @@ export default class Add extends Component {
         return;
       }
 
+      //reverse answer form bidi:override input
+      const revertAnswer = userAnswer.split("").reverse().join("");
+
       //try to use EqualTo() or something like this;
       // eslint-disable-next-line eqeqeq
-      if (userAnswer == this.state.firstNum + this.state.secondNum) {
+      if (revertAnswer == this.state.firstNum + this.state.secondNum) {
         //count rightAnswer
         this.setState(({ rightAnswerCounter }) => {
           return {
@@ -38,7 +41,7 @@ export default class Add extends Component {
       }
 
       //show answer in console
-      console.log(`Right answer = ${this.state.firstNum + this.state.secondNum} \nUser input   = ${userAnswer}`);
+      console.log(`Right answer = ${this.state.firstNum + this.state.secondNum} \n User input   = ${revertAnswer}`);
     };
 
     return (
@@ -70,7 +73,7 @@ export default class Add extends Component {
               </div>
             </div>
 
-            <div className="answer-input-box num">
+            <div className="num">
               <InputAnswer onInputAnswer={ checkAnswer } />
             </div>
 

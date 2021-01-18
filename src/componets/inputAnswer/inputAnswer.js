@@ -24,11 +24,9 @@ export default class InputAnswer extends Component {
     const { inputValue } = this.state;
 
     return (
-      // <div className="form-wrapper">
       <form className="answer-form" onSubmit={ this.onSubmit }>
         <input
           autoFocus
-          // className="large-input"
           className="input-answer"
           type="number"
           placeholder="..."
@@ -39,7 +37,6 @@ export default class InputAnswer extends Component {
           <span>&#10003;</span>
         </button>
       </form>
-      // </div>
     );
   }
 }
