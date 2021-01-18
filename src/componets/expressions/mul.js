@@ -18,14 +18,19 @@ export default class Mul extends Component {
         return;
       }
 
+      //reverse answer form bidi:override input
+      const revertAnswer = userAnswer.split("").reverse().join("");
+
+      console.log(revertAnswer, this.state.firstNum, this.state.secondNum);
+
       //try to use EqualTo() or something like this;
       // eslint-disable-next-line eqeqeq
-      if (userAnswer == this.state.firstNum * this.state.secondNum) {
+      if (revertAnswer == this.state.firstNum * this.state.secondNum) {
         //make count of rightAnswer
         this.setState(({ rightAnswerCounter }) => {
           return {
-            firstNum: randomIntGen(),
-            secondNum: randomIntGen(),
+            firstNum: randomIntGen(100),
+            secondNum: randomIntGen(100),
             rightAnswerCounter: rightAnswerCounter + 1,
           };
         });
@@ -38,7 +43,7 @@ export default class Mul extends Component {
         });
       }
 
-      console.log(`Right answer = ${this.state.firstNum * this.state.secondNum} \nUser input   = ${userAnswer}`);
+      console.log(`Right answer = ${this.state.firstNum * this.state.secondNum} \n User input   = ${revertAnswer}`);
     };
 
     return (
