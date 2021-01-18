@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import InputAnswer from "../inputAnswer/inputAnswer";
 import randomIntGen from "../randomIntGen/randomIntGen";
+import "./mul.css";
 
 export default class Mul extends Component {
 
@@ -50,13 +51,29 @@ export default class Mul extends Component {
             Мимо: { this.state.wrongAnswerCounter }
           </span>
         </div>
+        <hr />
         <br />
 
-        <div className="d-flex">
-          <span className="h1 text-nowrap mx-3 d-flex align-items-center">
-            { this.state.firstNum } * { this.state.secondNum } =
-          </span>
-          <InputAnswer onInputAnswer={ checkAnswer } />
+        <div className="expr-container">
+          <div className="expression-wrapper">
+            <div className="number-box ">
+
+              <div className="num">
+                { this.state.firstNum }
+              </div>
+
+              <span className="expr-symbol"> * </span>
+
+              <div className="num">
+                { this.state.secondNum }
+
+              </div>
+            </div>
+
+            <div className="num">
+              <InputAnswer onInputAnswer={ checkAnswer } />
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import InputAnswer from "../inputAnswer/inputAnswer";
 import randomIntGen from "../randomIntGen/randomIntGen";
+import "./dev.css";
 
 export default class Dev extends Component {
 
@@ -50,13 +51,20 @@ export default class Dev extends Component {
             Мимо: { this.state.wrongAnswerCounter }
           </span>
         </div>
+        <hr />
         <br />
 
-        <div className="d-flex">
-          <span className="h1 text-nowrap mx-3 d-flex align-items-center">
-            { this.state.firstNum * this.state.secondNum } / { this.state.secondNum } =
-          </span>
-          <InputAnswer onInputAnswer={ checkAnswer } />
+        <div className="dev-container">
+          <div className="dividend">
+            { this.state.firstNum * this.state.secondNum }
+            <div className="divisor">{ this.state.secondNum }
+              <div className="dev-answer">
+                <InputAnswer onInputAnswer={ checkAnswer } />
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
     );

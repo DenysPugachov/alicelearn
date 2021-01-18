@@ -4,7 +4,7 @@ import "./bootstrap.min.css";
 import "./style.css";
 import Expression from "../expressions/Expression";
 
-const version = "v1.01";
+const version = "v1.02";
 
 const btns = [
   { label: "+", id: "add", cls: "danger" },
@@ -16,10 +16,10 @@ const btns = [
 export default class App extends Component {
 
   state = {
-    add: true,
+    add: false,
     sub: false,
     mul: false,
-    dev: false,
+    dev: true,
   };
 
   clearState = () => {
