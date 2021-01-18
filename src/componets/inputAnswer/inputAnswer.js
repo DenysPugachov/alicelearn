@@ -24,19 +24,22 @@ export default class InputAnswer extends Component {
     const { inputValue } = this.state;
 
     return (
-      <form className="input-group" onSubmit={this.onSubmit}>
+      // <div className="form-wrapper">
+      <form className="answer-form" onSubmit={ this.onSubmit }>
         <input
-          className="form-control large-input"
+          autoFocus
+          // className="large-input"
+          className="input-answer"
           type="number"
           placeholder="..."
-          onChange={this.onInputChange}
-          value={inputValue}
+          onChange={ this.onInputChange }
+          value={ inputValue }
         />
-
-        <button className="btn btn-outline-info" type="submit">
+        <button className="btn btn-outline-info submit-answer-btn" type="submit">
           <span>&#10003;</span>
         </button>
       </form>
+      // </div>
     );
   }
 }

@@ -1,0 +1,44 @@
+.expr-container {
+  /* outline: solid rebeccapurple; */
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  margin-right: 30%;
+}
+
+.expression-wrapper {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  /* outline: solid green; */
+  /* width: fit-content; */
+}
+.number-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-bottom: solid 0.3rem;
+  padding: 5px;
+  /* border: solid blue; */
+  /* padding: 15px; */
+}
+.expr-symbol {
+  position: absolute;
+  font-size: 10vh;
+  left: -3rem;
+  top: 7%;
+}
+
+.num {
+  display: flex;
+  /* outline: solid gray; */
+  align-items: center;
+  height: 9vh;
+  font-size: 10vh;
+  width: fit-content;
+}
+
+.answer-input-box {
+  /* width: 35%; */
+}

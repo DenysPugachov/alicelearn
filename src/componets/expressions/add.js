@@ -51,15 +51,32 @@ export default class Add extends Component {
             Мимо: { this.state.wrongAnswerCounter }
           </span>
         </div>
+        <hr />
         <br />
 
-        <div className="d-flex">
-          <span className="h1 text-nowrap mx-3 align-items-center">
-            { this.state.firstNum } + { this.state.secondNum } =
-          </span>
-          <InputAnswer onInputAnswer={ checkAnswer } />
-        </div>
-      </div>
+        <div className="expr-container">
+          <div className="expression-wrapper">
+            <div className="number-box ">
+
+              <div className="num">
+                { this.state.firstNum }
+              </div>
+
+              <span className="expr-symbol"> + </span>
+
+              <div className="num">
+                { this.state.secondNum }
+
+              </div>
+            </div>
+
+            <div className="answer-input-box num">
+              <InputAnswer onInputAnswer={ checkAnswer } />
+            </div>
+
+          </div>
+        </div >
+      </div >
     );
   }
 
