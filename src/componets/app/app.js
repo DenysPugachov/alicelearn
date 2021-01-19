@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Header from "../header/header";
 import "./bootstrap.min.css";
 import "./style.css";
@@ -7,34 +7,31 @@ import Expression from "../expressions/Expression";
 const appVersion = "v1.04";
 
 const btns = [
-  { label: "+", id: "add", cls: "danger" },
-  { label: "-", id: "sub", cls: "warning" },
-  { label: "*", id: "mul", cls: "success" },
-  { label: "/", id: "dev", cls: "primary" },
+  { label: "+", id: "add", color: "danger" },
+  { label: "-", id: "sub", color: "warning" },
+  { label: "*", id: "mul", color: "success" },
+  { label: "/", id: "dev", color: "primary" },
 ];
 
-export default class App extends Component {
+const App = () => {
 
-  state = {
-    showExpression: "add",
-  };
+  const [showExpression, setShownExpression] = useState("add");
 
-  onBtnClicked = (btn) => {
-    this.setState({ showExpression: btn });
-  };
+  const onBtnClicked = btn => setShownExpression(btn);
 
-  render() {
-    return (
-      <div className="container" >
-        <div className="version">{ appVersion }</div>
-        <Header
-          buttons={ btns }
-          btnClicked={ this.onBtnClicked }
-          selectedBtn={ this.state.showExpression }
-        />
-        <hr />
-        <Expression selectedExpression={ this.state.showExpression } />
-      </div>
-    );
-  }
+  return (
+    <div className="container" >
+      <div className="version">{ appVersion }</div>
+      <Header
+        buttons={ btns }
+        btnClicked={ onBtnClicked }
+        selectedBtn={ showExpression }
+      />
+      <hr />
+      <Expression selectedExpression={ showExpression } />
+    </div>
+  );
 };
+
+
+export default App;

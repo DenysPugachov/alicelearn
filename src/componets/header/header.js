@@ -2,14 +2,15 @@ import React from "react";
 
 const Header = props => {
 
-
   const expressionBtns = props.buttons.map(btn => {
 
     const btnStatus = (props.selectedBtn === btn.id) && "active";
 
+    const cls = ["btn", `btn-outline-${btn.color}`, btnStatus];
+
     return (
       <button
-        className={ `btn btn-outline-${btn.cls} ${btnStatus}` }
+        className={ cls.join(" ") }
         key={ btn.id }
         onClick={ () => { props.btnClicked(btn.id); } }
       > { btn.label }
@@ -26,5 +27,6 @@ const Header = props => {
       </div>
     </nav >
   );
-};;
+};
+
 export default Header;
