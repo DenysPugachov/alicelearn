@@ -33,9 +33,9 @@ export default class InputAnswer extends Component {
           onChange={ this.onInputChange }
           value={ inputValue }
         />
-        <button className="btn btn-outline-info submit-answer-btn" type="submit">
+        {/* <button className="btn btn-outline-info submit-answer-btn" type="submit">
           <span>&#10003;</span>
-        </button>
+        </button> */}
       </form>
     );
   }

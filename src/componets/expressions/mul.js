@@ -67,7 +67,7 @@ export default class Mul extends Component {
                 { this.state.firstNum }
               </div>
 
-              <span className="expr-symbol"> * </span>
+              <span className="expr-symbol mul-symbol"> * </span>
 
               <div className="num">
                 { this.state.secondNum }

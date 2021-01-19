@@ -9,7 +9,7 @@
   /* background: greenyellow; */
   width: 100%;
   padding: 5px;
-  height: 9vh;
+  height: 9vw;
   direction: rtl;
   unicode-bidi: bidi-override;
 }
@@ -32,6 +32,6 @@ select:focus {
 .submit-answer-btn {
   position: absolute;
   right: -49px;
-  height: 9vh;
+  height: 9vw;
   font-size: xx-large;
 }

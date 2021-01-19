@@ -3,7 +3,7 @@
   padding: 5px;
   display: flex;
   justify-content: center;
-  margin-right: 30%;
+  margin-right: 35%;
 }
 
 .expression-wrapper {
@@ -18,23 +18,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  border-bottom: solid 0.3rem;
+  border-bottom: solid 0.2rem;
   padding: 5px;
   /* border: solid blue; */
   /* padding: 15px; */
 }
 .expr-symbol {
   position: absolute;
-  font-size: 10vh;
-  left: -3rem;
-  top: 7%;
+  font-size: 10vw;
+  left: -25%;
+  top: 10%;
 }
 
 .num {
   display: flex;
   /* outline: solid gray; */
   align-items: center;
-  height: 9vh;
-  font-size: 10vh;
+  height: 9vw;
+  font-size: 10vw;
   width: fit-content;
 }
