@@ -4,7 +4,7 @@ import "./bootstrap.min.css";
 import "./style.css";
 import Expression from "../expressions/Expression";
 
-const version = "v1.04";
+const appVersion = "v1.04";
 
 const btns = [
   { label: "+", id: "add", cls: "danger" },
@@ -16,63 +16,24 @@ const btns = [
 export default class App extends Component {
 
   state = {
-    add: true,
-    sub: false,
-    mul: false,
-    dev: false,
+    showExpression: "add",
   };
 
-  clearState = () => {
-    this.setState(() => {
-      return {
-        add: false,
-        sub: false,
-        mul: false,
-        dev: false,
-      };
-    });
-  };
-
-  btnClicked = (btn) => {
-    // console.log(` Btn clicked form App.js => ${btn}`);
-
-    this.clearState();
-
-    switch (btn) {
-      case "add":
-        this.setState(({ add: true }));
-        break;
-
-      case "sub":
-        this.setState(({ sub: true }));
-        break;
-
-      case "mul":
-        this.setState(({ mul: true }));
-        break;
-
-      case "dev":
-        this.setState(({ dev: true }));
-        break;
-
-      default:
-        console.error("Wrong heder props (clickedBtn)");
-        break;
-    }
-
+  onBtnClicked = (btn) => {
+    this.setState({ showExpression: btn });
   };
 
   render() {
     return (
       <div className="container" >
-        <div className="version">{ version }</div>
+        <div className="version">{ appVersion }</div>
         <Header
           buttons={ btns }
-          btnClicked={ this.btnClicked }
-          selectedBtn={ this.state }
+          btnClicked={ this.onBtnClicked }
+          selectedBtn={ this.state.showExpression }
         />
         <hr />
-        <Expression selectedExpression={ this.state } />
+        <Expression selectedExpression={ this.state.showExpression } />
       </div>
     );
   }

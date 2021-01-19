@@ -6,12 +6,14 @@ import "./expression.css";
 
 const Expression = props => {
 
+  const showExpression = props.selectedExpression;
+
   return (
     <div>
-      { props.selectedExpression.add && <Add /> }
-      { props.selectedExpression.sub && <Sub /> }
-      { props.selectedExpression.dev && <Dev /> }
-      { props.selectedExpression.mul && <Mul /> }
+      { showExpression === "add" && <Add /> }
+      { showExpression === "sub" && <Sub /> }
+      { showExpression === "dev" && <Dev /> }
+      { showExpression === "mul" && <Mul /> }
     </div>
   );
 
