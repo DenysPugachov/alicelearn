@@ -3,13 +3,14 @@
   justify-content: center;
   direction: column;
   font-size: 9vw;
+  margin-left: 20%;
 }
 
 .divisor {
   position: relative;
   display: inline-block;
-  border-left: solid 0.3rem;
-  border-bottom: solid 0.3rem;
+  border-left: solid 0.2rem;
+  border-bottom: solid 0.2rem;
   padding: 0 0 0 18px;
   margin-left: 1.5rem;
   width: 40%;
@@ -21,6 +22,7 @@
 }
 
 .dev-answer .input-answer {
+  margin-top: 0.2rem;
   direction: ltr;
   text-align: right;
 }

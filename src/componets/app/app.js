@@ -4,7 +4,7 @@ import "./bootstrap.min.css";
 import "./style.css";
 import Expression from "../expressions/Expression";
 
-const appVersion = "v1.05";
+const appVersion = "v1.051";
 
 const btns = [
   { label: "+", id: "add", color: "danger" },
