@@ -3,6 +3,7 @@ import Header from "../header/header";
 import "./bootstrap.min.css";
 import "./style.css";
 import Expression from "../expressions/Expression";
+import Timer from "../timer/timer";
 
 const appVersion = "v1.051";
 
@@ -28,6 +29,7 @@ const App = () => {
         selectedBtn={ showExpression }
       />
       <hr />
+      <Timer />
       <Expression selectedExpression={ showExpression } />
     </div>
   );
