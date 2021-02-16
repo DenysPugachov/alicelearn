@@ -1,7 +1,7 @@
 import React from "react";
 
 export default class Clock extends React.Component {
-  state = { secondsFromStart: 3599 };
+  state = { secondsFromStart: 0 };
 
   secondsToTime(secs) {
     let hours = Math.floor(secs / (60 * 60));

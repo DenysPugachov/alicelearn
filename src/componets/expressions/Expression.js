@@ -20,4 +20,4 @@ const Expression = props => {
 
 };
 
-export default Expression;
+export { Sub, Add, Mul, Dev };

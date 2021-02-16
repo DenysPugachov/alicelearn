@@ -1,20 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = props => {
 
   const expressionBtns = props.buttons.map(btn => {
-
     const btnStatus = (props.selectedBtn === btn.id) && "active";
 
     const cls = ["btn", `btn-outline-${btn.color}`, btnStatus];
 
     return (
-      <button
+      <Link
         className={ cls.join(" ") }
         key={ btn.id }
-        onClick={ () => { props.btnClicked(btn.id); } }
-      > { btn.label }
-      </button>
+        to={ `/${btn.id}` }
+      >
+        { btn.label }
+      </Link>
     );
   });
 
