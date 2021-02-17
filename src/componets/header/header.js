@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 
 const btnsData = [
@@ -11,19 +11,28 @@ const btnsData = [
 
 const Header = () => {
 
-  const expressionBtns = btnsData.map(btn => {
-    const btnStatus = (window.location.href === `http://localhost:3000/${btn.id}`) && "active";
+  // const [currentUrl, setActiveBtn] = useState("http://localhost:3000/add")
 
-    const cls = ["btn", `btn-outline-${btn.color}`, btnStatus];
+  // const changeActiveBtn = () => {
+  //   setActiveBtn(window.location.href)
+
+  // }
+
+  const expressionBtns = () => btnsData.map(btn => {
+    // const btnStatus = (window.location.href === `http://localhost:3000/${btn.id}`) && "active";
+
+    const cls = ["btn", `btn-outline-${btn.color}`];
 
     return (
-      <Link
+      <NavLink
         className={ cls.join(" ") }
+        activeClassName="active"
         key={ btn.id }
         to={ `/${btn.id}` }
+        onClick={ () => expressionBtns }
       >
         { btn.label }
-      </Link>
+      </NavLink>
     );
   });
 
@@ -31,7 +40,7 @@ const Header = () => {
     <nav className="navbar navbar-expand bg-transparent mb-3" >
       <div className="container justify-content-around">
 
-        { expressionBtns }
+        { expressionBtns() }
 
       </div>
     </nav >
