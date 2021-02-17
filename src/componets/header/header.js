@@ -1,10 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = props => {
 
-  const expressionBtns = props.buttons.map(btn => {
-    const btnStatus = (props.selectedBtn === btn.id) && "active";
+const btnsData = [
+  { label: "+", id: "add", color: "danger" },
+  { label: "-", id: "sub", color: "warning" },
+  { label: "*", id: "mul", color: "success" },
+  { label: "/", id: "dev", color: "primary" },
+];
+
+const Header = () => {
+
+  const expressionBtns = btnsData.map(btn => {
+    const btnStatus = (window.location.href === `http://localhost:3000/${btn.id}`) && "active";
 
     const cls = ["btn", `btn-outline-${btn.color}`, btnStatus];
 

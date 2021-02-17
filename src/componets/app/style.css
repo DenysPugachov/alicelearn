@@ -3,3 +3,44 @@
   right: 0;
   color: gray;
 }
+
+.expression-container .expr-container {
+  /* outline: solid rebeccapurple; */
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  margin-right: 35%;
+}
+
+.expression-container .expression-wrapper {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  /* outline: solid green; */
+  /* width: fit-content; */
+}
+.expression-container .number-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-bottom: solid 0.2rem;
+  padding: 5px;
+  /* border: solid blue; */
+  /* padding: 15px; */
+}
+.expression-container .expr-symbol {
+  position: absolute;
+  font-size: 10vw;
+  left: -25%;
+  top: 10%;
+}
+
+.expression-container .num {
+  display: flex;
+  /* outline: solid gray; */
+  align-items: center;
+  height: 9vw;
+  font-size: 10vw;
+  width: fit-content;
+}
