@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import GoogleAuth from "../GoogleAuth";
 
 
 const btnsData = [
@@ -11,15 +12,7 @@ const btnsData = [
 
 const Header = () => {
 
-  // const [currentUrl, setActiveBtn] = useState("http://localhost:3000/add")
-
-  // const changeActiveBtn = () => {
-  //   setActiveBtn(window.location.href)
-
-  // }
-
   const expressionBtns = () => btnsData.map(btn => {
-    // const btnStatus = (window.location.href === `http://localhost:3000/${btn.id}`) && "active";
 
     const cls = ["btn", `btn-outline-${btn.color}`];
 
@@ -41,7 +34,7 @@ const Header = () => {
       <div className="container justify-content-around">
 
         { expressionBtns() }
-
+        <GoogleAuth />
       </div>
     </nav >
   );
